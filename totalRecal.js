@@ -330,9 +330,12 @@ calculateCube()
 
 function isVowel(a) {
   if (a === 'a' || a === 'e' || a === 'i' || a === 'o' || a === 'u') {
-    console.log(true);
+    // console.log(true);
   } else {
-    console.log(false);
+    // console.log(false);
   }
 }
-isVowel('e')
+isVowel('I'.toLowerCase())
+
+///////////////////// E.getTwoLengths///////////////////////
+// Write a function getTwoLengthsthat accepts two parameters(strings).The function should return an array of numbers where each number is the length of the corresponding string.
