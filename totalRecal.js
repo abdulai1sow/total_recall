@@ -301,3 +301,38 @@ thomsCloset[1][2] = 'Footie Pajamas'
 
 //////============= IV.Functions======================
 
+///////////////////////// A.printGreeting////////////////
+//skip
+
+// //////////////////////B.printCool/////////////////////
+
+// Write a function printCoolthat accepts one parameter, nameas an argument.The function should print the name and a message saying that that person is cool.
+
+const printCool = (name) => {
+  name = 'sow'
+  // console.log(`Captain ${name} is cool`);
+}
+printCool()
+
+
+///////////////////// C.calculateCube/////////////////////
+
+// Write a function calculateCubethat takes a single number and prints the volume of a cube made from that number.
+
+const calculateCube = function (cube) {
+  cube = 5
+  // console.log(cube * 4);
+}
+calculateCube()
+
+///////////////////////// D.isVowel//////////////////////
+// Write a function isVowelthat takes a character(i.e.a string of length 1) and returns true if it is a vowel, false otherwise.The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
+
+function isVowel(a) {
+  if (a === 'a' || a === 'e' || a === 'i' || a === 'o' || a === 'u') {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+isVowel('e')
