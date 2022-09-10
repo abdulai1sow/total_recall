@@ -339,3 +339,166 @@ isVowel('I'.toLowerCase())
 
 ///////////////////// E.getTwoLengths///////////////////////
 // Write a function getTwoLengthsthat accepts two parameters(strings).The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getTwoLengths = (sow, hello) => {
+  // let get1 = sow && hello.lengths
+  // let get2 = hello.lengths
+  return (sow.length, hello.length)
+}
+// console.log(getTwoLengths('sow','hello'));
+// let result = getTwoLengths('hello','sow').length
+// let result2 = getTwoLengths('sow').length
+// console.log(result);
+
+
+//////////////////////// F.getMultipleLengths///////////
+// Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings.The function should return an array of numbers where each number is the length of the corresponding string.
+
+function getMultipleLengthsthat(single) {
+  for (let i = 0; i < single.length; i++){
+    let each = single[i].length
+    // console.log(each);
+  }
+}
+// console.log(getMultipleLengthsthat(["hello", "what", "is", "up", "dude"]));
+
+//////////////////////// G.maxOfThree/////////////////////////
+// Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them.If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
+
+const maxOfThreethat = function (a, b, c) {
+  if (a == b && a == c) {
+    console.log(b);
+  }
+  else if (a > b && c) {
+    console.log(a);
+  } else if (b > a && c) {
+    console.log(b);
+  } else if (c > a && b) {
+    console.log(c);
+  }
+}
+// maxOfThreethat(211,32,2)
+
+///////////////////// H.printLongestWord////////////////////
+// Write a function printLongestWordthat accepts a single argument, an array of strings.The method should return the longest word in the array.In case of a tie, the method should return the word that appears first in the array.
+
+const printLongestWordthat = (strings) => {
+  let longest = 0;
+  for (let i = 0; i < strings.length; i++){
+    if(strings[i].length >= longest) {
+      longest = strings[i].length
+    }
+    // let each = single[i].length
+    // console.log(longest);
+  }
+}
+printLongestWordthat(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"])
+
+// //////////////////////Objects////////////////////
+
+// A.Make a user object
+// Create an object called user.
+// Write in to the object the key - value pairs for name, email, age, and purchased.Set the value of purchasedto an empty array[].Set the other values to whatever you would like.
+
+const user = {
+  name: 'abdulai',
+  email: 'abdulai@gmail.com',
+  age: 34,
+  purchased: ['bread', 'coffe', 'kinkeliba tea','phone'],
+}
+//B.Update the user
+user.email = 'sow@gmail.com'
+user.age++ //incurment the age by one
+// C.Adding keys and values
+user.location = 'Tanzania'
+//D.Shopaholic!
+user.purchased.push('carbohydrates')
+// Using.push(), add the string "peace of mind" to the purchasedarray
+user.purchased.push('peace of mind')
+// add the string "Merino jodhpurs" to the purchasedarray.
+user.purchased.push('Merino jodhpurs')
+// Console.log just the "Merino jodhpurs" from the purchasedarray.
+// console.log(user.purchased[6]);
+
+// ///////////////E.Object - within - object///////////////////
+// Write a friendobject into your userobject and give the friend a name, age, location, and purchased array(empty for now)
+user.friend = {
+  name: "Grace Hopper",
+  age: 34,
+  location: 'senegal',
+  purchased: []
+}
+
+// Console.log just the friend's name
+// console.log(user.friend.name);
+
+// Console.log just the friend's location
+// console.log(user.friend.location);
+
+// CHANGE the friend's age to 55
+user.friend.age = 55
+// console.log(user.friend.age);
+
+// The friend has purchased "The One Ring".Use.push()to add "The One Ring" to the friend's purchased array.
+user.friend.purchased.push('The One Ring')
+
+// The friendhas purchased "A latte".Use.push()to add "A latte" to the friend's purchasedarray.
+user.friend.purchased.push('A latte')
+
+// Console.log just "A latte" from the friend's purchasedarray.
+// console.log(user.friend.purchased[1]);
+
+// ===========================F.Loops==========================
+
+// Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), and prints each element to the console.
+// user.purchased.forEach(copy => console.log(copy))
+
+// Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
+user.friend.purchased.forEach((copy)=>{
+  // console.log(copy);
+})
+
+// ==============G.Functions can operate on objects==================
+
+// Write a single function updateUserthat takes no parameters.When the function is run, it should:
+const updateUser = () => {
+  let userAge = +1
+  let usersName = ''
+  if (usersName === '') {
+    // console.log(usersName.toUpperCase);
+  } 
+}
+
+// Write a function oldAndLoud that performs the exact same tasks as updateUser, but instead of hard - coding it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called.Call your oldAndLoudfunction with useras the argument.
+const oldAndLoud = (person) => {
+  
+}
+
+// =========================Cat Combinator
+// ============1. Mama cat
+
+const cat1 ={
+  name: 'solo',
+  breed: 'german',
+  age: 10
+}
+// console.log(cat1.age);
+// console.log(cat1.breed);
+
+// ==========================2. Papa cat
+const cat2 = {
+  name: 'water',
+  breed: 'german',
+  age: 10
+}
+
+// ==========================3. Combine Cats!
+const combineCats = (mama, papa) => {
+  // mama === cat1
+  // papa === cat2
+  console.log(mama,papa);
+}
+// combineCats(cat1,cat2)
+
+// ======================4. Cat brain bender
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2), combineCats(cat1, cat2)));
